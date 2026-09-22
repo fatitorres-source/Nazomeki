@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dyb7d6dpqngqc"]
+
+[ext_resource type="Script" uid="uid://c4ap5hlwp57r0" path="res://scripts/rules_goals/game_logic.gd" id="1_r40rm"]
+[ext_resource type="PackedScene" uid="uid://8st4scqt06l8" path="res://components/player/player.tscn" id="2_6q4t8"]
+
+[node name="Node2D" type="Node2D" unique_id=509791064]
+
+[node name="GameLogic" type="Node" parent="." unique_id=1916753250]
+script = ExtResource("1_r40rm")
+metadata/_custom_type_script = "uid://c4ap5hlwp57r0"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1570562927]
+
+[node name="Player" parent="." unique_id=1041196418 instance=ExtResource("2_6q4t8")]
+position = Vector2(8, 38.000004)
+scale = Vector2(0.2, 0.2)
+acceleration = 2000.0
+jump_velocity = 500.0
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=291432098]
+position = Vector2(0, 1.8119812e-05)
+zoom = Vector2(4.5, 4.5)
