@@ -1,6 +1,8 @@
 @tool
 extends Node
 
+var cuchillo: bool = false
+
 signal coin_collected
 signal flag_raised(flag: Flag)
 signal lives_changed

@@ -10,6 +10,7 @@
 [ext_resource type="SpriteFrames" uid="uid://c2wpvtw1stuyq" path="res://components/player/spriteframes-inkdrinker-red.tres" id="8_msvv2"]
 [ext_resource type="Script" uid="uid://bt2bwnn77q3et" path="res://area_2d.gd" id="9_n46hn"]
 [ext_resource type="PackedScene" uid="uid://b7odi6x1o8ad1" path="res://components/npcs/book.tscn" id="10_b6m11"]
+[ext_resource type="PackedScene" uid="uid://cjw3uh38vrhgc" path="res://components/npcs/cuchillo.tscn" id="11_rrhul"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5j2ht"]
 texture = ExtResource("2_n46hn")
@@ -1660,5 +1661,9 @@ next_scene_path = "res://Nazomek¡1.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=778459279]
 position = Vector2(311, 921)
 shape = SubResource("CapsuleShape2D_b6m11")
+
+[node name="Cuchillo" parent="." unique_id=743018540 instance=ExtResource("11_rrhul")]
+position = Vector2(3354, 366)
+scale = Vector2(0.265, 0.265)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

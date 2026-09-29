@@ -18,10 +18,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://scripts/global.gd"
 Actions="*res://scripts/actions.gd"
 WebSceneSelector="uid://cag3i6auntfwn"
 PauseScreen="uid://n24yvet11xse"
+Global="*uid://bcrweqbfl2aht"
 
 [display]
 

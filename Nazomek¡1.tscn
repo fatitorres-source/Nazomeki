@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://8st4scqt06l8" path="res://components/player/player.tscn" id="8_h6q1l"]
 [ext_resource type="Texture2D" uid="uid://dop8v1uyij5qm" path="res://assets/atlas-props.png" id="9_rr47n"]
 [ext_resource type="Script" uid="uid://bt2bwnn77q3et" path="res://area_2d.gd" id="10_sy8gm"]
+[ext_resource type="PackedScene" uid="uid://cesucjribvuym" path="res://components/npcs/pozo.tscn" id="11_amd4v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lef2u"]
 texture = ExtResource("2_amd4v")
@@ -5287,6 +5288,7 @@ tile_set = SubResource("TileSet_e6flx")
 
 [node name="Player" parent="." unique_id=1041196418 instance=ExtResource("8_h6q1l")]
 position = Vector2(338, 1041)
+speed = 240.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1962937198]
 position = Vector2(-10, -84)
@@ -5311,6 +5313,10 @@ next_scene_path = "res://Nazomek¡2.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=462969635]
 position = Vector2(336, 1006)
 shape = SubResource("CapsuleShape2D_11acw")
+
+[node name="Pozo" parent="." unique_id=1390095040 instance=ExtResource("11_amd4v")]
+position = Vector2(781, 617)
+scale = Vector2(0.125, 0.125)
 
 [connection signal="body_entered" from="Area2D" to="GameLogic" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
