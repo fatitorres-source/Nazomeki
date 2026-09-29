@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b7odi6x1o8ad1"]
+
+[ext_resource type="Script" uid="uid://beyxi53xomgmr" path="res://components/npcs/book.gd" id="1_4uafa"]
+[ext_resource type="Texture2D" uid="uid://rks306bok4x4" path="res://assets/book.png" id="2_s237j"]
+[ext_resource type="FontFile" uid="uid://ctbfpjqpinyp3" path="res://font/ConnectionII.otf" id="3_s237j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m355m"]
+radius = 40.012497
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_co0rn"]
+radius = 64.195015
+
+[sub_resource type="LabelSettings" id="LabelSettings_pdd7p"]
+font = ExtResource("3_s237j")
+font_size = 40
+
+[node name="Book" type="Node2D" unique_id=160858970]
+script = ExtResource("1_4uafa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1746947587]
+texture = ExtResource("2_s237j")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=256453054]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1832514901]
+position = Vector2(0, -7.97)
+shape = SubResource("CircleShape2D_m355m")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1341415726]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=153692829]
+position = Vector2(0, -9.15)
+shape = SubResource("CircleShape2D_co0rn")
+debug_color = Color(0.7256666, 0.42000937, 0.5994352, 0.41960785)
+
+[node name="LabelContainer" type="Node2D" parent="." unique_id=1896412394]
+
+[node name="Label" type="Label" parent="LabelContainer" unique_id=1747195125]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 62.0
+offset_right = 79.0
+offset_bottom = 111.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_pdd7p")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
